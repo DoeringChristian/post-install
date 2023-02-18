@@ -35,6 +35,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 echo "Installing Starship..."
 cargo install starship --locked
 echo 'eval "$(starship init zsh)"' >> .zshrc
+source .zshrc
 
 echo "Installing NeoVim..."
 dnf copr enable -y agriffis/neovim-nightly
