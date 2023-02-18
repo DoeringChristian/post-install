@@ -18,7 +18,7 @@ curl https://sh.rustup.rs -sSf | bash -s -- -y
 source $HOME/.bashrc
 
 echo "Installing ZSH..."
-dnf install -y zsh
+sudo dnf install -y zsh
 
 echo "Installing Nerd Font ($NERD_FONT)..."
 wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$NERD_FONT.zip
@@ -57,8 +57,8 @@ cargo install starship --locked
 echo 'eval "$(starship init zsh)"' >> .zshrc
 
 echo "Installing NeoVim..."
-dnf copr enable -y agriffis/neovim-nightly
-dnf install -y neovim python3-neovim
+sudo dnf copr enable -y agriffis/neovim-nightly
+sudo dnf install -y neovim python3-neovim
 
 # echo "Installing Tmux..."
 # dnf install -y tmux
