@@ -60,14 +60,11 @@ echo "Installing NeoVim..."
 dnf copr enable -y agriffis/neovim-nightly
 dnf install -y neovim python3-neovim
 
-# echo "Installing Tmux..."
-# dnf install -y tmux
-#
+echo "Installing Tmux..."
+dnf install -y tmux
+
 # echo "Installing Tmux:TPM..."
 # git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-#
-# echo "Reloading Tmux..."
-# tmux new-session -d -s "tmp" tmux source-file ~/.tmux.conf
 
-echo "Installing Zellij..."
-cargo install --locked zellij
+echo "Reloading Tmux..."
+tmux new-session -d -s "tmp" tmux source-file ~/.tmux.conf
