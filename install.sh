@@ -12,6 +12,10 @@ sudo dnf install -y util-linux-user
 sudo dnf install -y which
 sudo dnf install -y 'dnf-command(copr)'
 sudo dnf install -y git
+sudo dnf install -y kitty
+
+echo "Installing RPM Fusion..."
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 echo "Installing Rust..."
 curl https://sh.rustup.rs -sSf | bash -s -- -y
@@ -63,8 +67,8 @@ sudo dnf install -y neovim python3-neovim
 echo "Installing Tmux..."
 dnf install -y tmux
 
-# echo "Installing Tmux:TPM..."
-# git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+echo "Installing Tmux:TPM..."
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "Reloading Tmux..."
 tmux new-session -d -s "tmp" tmux source-file ~/.tmux.conf
