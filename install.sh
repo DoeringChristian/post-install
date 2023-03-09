@@ -75,3 +75,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "Reloading Tmux..."
 tmux new-session -d -s "tmp" tmux source-file ~/.tmux.conf
+
+echo "Installing GITUI..."
+cargo install gitui
